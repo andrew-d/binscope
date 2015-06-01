@@ -82,6 +82,10 @@ var (
 
 func init() {
 	flag.BoolVarP(&flagVerbose, "verbose", "v", false, "be verbose")
+	flag.Usage = func() {
+		fmt.Fprintf(os.Stderr, "Usage: binscope [options] <file1>...\n")
+		flag.PrintDefaults()
+	}
 }
 
 func main() {
