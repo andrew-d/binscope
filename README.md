@@ -20,3 +20,13 @@ $ ./binscope ./test_binaries/x86/*.exe
 ./test_binaries/x86/CompileFlags-no-NXCOMPAT.exe:does not have NXCOMPAT bit set
 ./test_binaries/x86/CompileFlags-no-SAFESEH.exe:does not use SAFESEH
 ```
+
+## Installation
+
+You can either compile the code manually:
+
+    git clone https://github.com/andrew-d/binscope.git
+    cd binscope
+    go build -v .
+
+Or you can obtain a [pre-compiled release](https://github.com/andrew-d/binscope/releases).
