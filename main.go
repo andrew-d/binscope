@@ -152,7 +152,7 @@ func check(fname string) error {
 			log.Printf("   SecurityCookie = 0x%x", securityCookie)
 		}
 		if securityCookie == 0 {
-			fmt.Printf("%s:does not use security cookies", fname)
+			fmt.Printf("%s:does not use security cookies\n", fname)
 		}
 
 		// Check for SAFESEH on Windows x86 only
@@ -162,7 +162,7 @@ func check(fname string) error {
 				handlerCount := dir.(*ImageLoadConfigDirectory32).SEHandlerTable
 
 				if handlerTable == 0 {
-					fmt.Printf("%s:does not use SAFESEH", fname)
+					fmt.Printf("%s:does not use SAFESEH\n", fname)
 				}
 
 				if flagVerbose {
