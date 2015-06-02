@@ -118,6 +118,7 @@ func check(fname string) error {
 	subsystem := getSubsystem(pefile)
 
 	if flagVerbose {
+		log.Printf("   Machine = 0x%04d\n", pefile.Machine)
 		log.Printf("   Subsystem = %d\n", subsystem)
 		log.Printf("   DllCharacteristics = 0x%04x\n", dch)
 	}
